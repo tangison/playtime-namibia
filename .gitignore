@@ -70,3 +70,4 @@ server.log
 /src/lib/db.ts
 /build-test/
 /agent-ctx/
+/deploy-playtime/
