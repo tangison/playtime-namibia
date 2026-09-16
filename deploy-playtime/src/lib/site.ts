@@ -70,8 +70,8 @@ export const navItems: NavItem[] = [
 
 export const sponsors = [
   { name: "Cavema Fishing", src: "/images/sponsor-cavema.webp" },
-  { name: "Hydroweld Walvis Bay", src: "/images/sponsor-hydroweld.webp" },
-  { name: "Namibia Ship Chandlers", src: "/images/sponsor-namibia-ship-chandlers.webp" },
+  { name: "Hydroweld Walvis Bay", src: "/images/sponsor-hydroweld.png" },
+  { name: "Namibia Ship Chandlers", src: "/images/sponsor-namibia-ship-chandlers.png" },
   { name: "OTB Sport", src: "/images/sponsor-otb.webp" },
   { name: "Global United FC", src: "/images/sponsor-global-united.webp" },
   { name: "Atlantis Sport Club", src: "/images/sponsor-atlantis.webp" },
