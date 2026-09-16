@@ -135,6 +135,10 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body {
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "cv11", "ss01";
@@ -142,6 +146,8 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+    min-width: 0;
   }
 }
 
@@ -230,10 +236,44 @@ html {
   background-size: 22px 22px;
 }
 
-/* Chunky focus ring for keyboard users */
+/* Chunky focus ring for keyboard users (teal-700 clears 3:1 on both
+   light and dark brand surfaces, unlike amber) */
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-amber-brand);
+  outline: 3px solid var(--color-teal-700);
   outline-offset: 2px;
   border-radius: 6px;
+}
+
+/* ── Demo loading splash ─────────────────────────────── */
+.splash-logo {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.splash-tag {
+  opacity: 0;
+}
+.splash-bar {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .splash-logo {
+    animation: splash-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+  }
+  .splash-tag {
+    animation: splash-fade 0.5s ease-out 0.35s forwards;
+  }
+  .splash-bar {
+    animation: splash-fill 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+}
+@keyframes splash-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes splash-fade {
+  to { opacity: 1; }
+}
+@keyframes splash-fill {
+  to { transform: scaleX(1); }
 }

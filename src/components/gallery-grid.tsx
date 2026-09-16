@@ -45,7 +45,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               type="button"
               onClick={() => setIndex(i)}
               aria-label={`Open photo ${i + 1} of ${images.length}: ${image.caption}`}
-              className="group relative block w-full overflow-hidden rounded-2xl border border-teal-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-amber-brand"
+              className="group relative block w-full overflow-hidden rounded-2xl border border-teal-100 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-teal-700"
             >
               <Image
                 src={image.src}

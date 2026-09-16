@@ -88,7 +88,7 @@ export function ScrollCarousel({
           onClick={() => step(-1)}
           disabled={!canPrev}
           aria-label={`Scroll ${label} backwards`}
-          className="inline-flex size-11 items-center justify-center rounded-full border border-teal-100 bg-white text-navy-900 shadow-sm transition-all hover:border-teal-300 hover:text-teal-700 disabled:pointer-events-none disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-teal-100 bg-white text-navy-900 shadow-sm transition-[border-color,color] hover:border-teal-300 hover:text-teal-700 disabled:pointer-events-none disabled:opacity-35"
         >
           <ChevronLeft className="size-5" aria-hidden="true" />
         </button>
@@ -97,7 +97,7 @@ export function ScrollCarousel({
           onClick={() => step(1)}
           disabled={!canNext}
           aria-label={`Scroll ${label} forwards`}
-          className="inline-flex size-11 items-center justify-center rounded-full border border-teal-100 bg-white text-navy-900 shadow-sm transition-all hover:border-teal-300 hover:text-teal-700 disabled:pointer-events-none disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-teal-100 bg-white text-navy-900 shadow-sm transition-colors hover:border-teal-300 hover:text-teal-700 disabled:pointer-events-none disabled:opacity-35"
         >
           <ChevronRight className="size-5" aria-hidden="true" />
         </button>
@@ -135,7 +135,7 @@ export function ScrollCarousel({
           >
             <span
               className={cn(
-                "block h-2.5 rounded-full transition-all duration-300",
+                "block h-2.5 rounded-full transition-[transform,box-shadow] duration-300",
                 i === index
                   ? "w-6 bg-teal-600"
                   : "w-2.5 bg-teal-200 hover:bg-teal-400"

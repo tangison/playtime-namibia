@@ -75,8 +75,8 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Brand + contact */}
           <div className="lg:col-span-5">
-            <Image
-              src="/images/logo.png"
+              <img
+              src="/images/logo.svg"
               alt="Playtime Namibia shield logo"
               width={220}
               height={79}

@@ -95,7 +95,7 @@ export default function FacilitiesPage() {
                       key={amenity}
                       className="flex min-h-11 items-center gap-2.5 rounded-xl bg-teal-50 px-4 py-2.5 text-sm font-medium text-teal-900"
                     >
-                      <CheckCircle2 className="size-5 shrink-0 text-teal-600" aria-hidden="true" />
+                      <CheckCircle2 className="size-5 shrink-0 text-teal-700" aria-hidden="true" />
                       {amenity}
                     </li>
                   ))}
@@ -194,7 +194,7 @@ export default function FacilitiesPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
+              className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
             >
               <Link href="/contact">
                 Contact us

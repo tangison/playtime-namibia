@@ -121,7 +121,7 @@ export default function EventsPage() {
                     </p>
                     <div className="rounded-2xl bg-teal-50 p-5">
                       <p className="flex items-center gap-2 font-display text-lg font-black text-navy-950">
-                        <Trophy className="size-5 text-teal-600" aria-hidden="true" />
+                        <Trophy className="size-5 text-teal-700" aria-hidden="true" />
                         Final result: The Navy 4-1 Red Team
                       </p>
                       <p className="mt-1.5 text-sm text-teal-900">

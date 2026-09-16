@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, ArrowRight, HeartHandshake } from "lucide-react";
@@ -40,7 +39,7 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b transition-all duration-300",
+        "sticky top-0 z-50 w-full border-b transition-[background-color,border-color,box-shadow] duration-300",
         scrolled
           ? "border-border bg-white/90 shadow-sm backdrop-blur-md"
           : "border-transparent bg-white"
@@ -58,13 +57,12 @@ export function SiteHeader() {
           className="flex shrink-0 items-center gap-2"
           aria-label="Playtime Namibia home"
         >
-          <Image
-            src="/images/logo.png"
+          <img
+            src="/images/logo.svg"
             alt="Playtime Namibia shield logo"
             width={180}
             height={64}
             className="h-11 w-auto sm:h-[52px]"
-            priority
           />
         </Link>
 
@@ -137,7 +135,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Button
             asChild
-            className="press-amber hidden h-11 rounded-xl bg-amber-brand px-5 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)] sm:inline-flex"
+            className="press-amber hidden h-11 rounded-xl bg-amber-brand px-5 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)] sm:inline-flex"
           >
             <Link href="/get-involved">
               <HeartHandshake className="size-4" aria-hidden="true" />
@@ -166,8 +164,8 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="mb-4 inline-block"
               >
-                <Image
-                  src="/images/logo.png"
+                      <img
+                  src="/images/logo.svg"
                   alt="Playtime Namibia shield logo"
                   width={170}
                   height={61}
@@ -186,7 +184,7 @@ export function SiteHeader() {
                       )}
                     >
                       {item.title}
-                      <ArrowRight className="size-4 text-teal-600" aria-hidden="true" />
+                      <ArrowRight className="size-4 text-teal-700" aria-hidden="true" />
                     </Link>
                     {item.children && (
                       <div className="ml-4 flex flex-col border-l border-teal-100 pl-3">

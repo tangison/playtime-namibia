@@ -64,7 +64,7 @@ export default function GetInvolvedPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+                  className="h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
                 >
                   <Link href="/contact">
                     <Mail className="size-5" aria-hidden="true" />
@@ -106,23 +106,23 @@ export default function GetInvolvedPage() {
             eyebrow="Ways to contribute"
             title="Every kind of support counts"
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {pathways.map((pathway, i) => (
-              <Reveal key={pathway.title} delay={i * 0.08}>
-                <div className="h-full rounded-[1.75rem] border border-teal-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                  <span className="mb-6 flex size-14 items-center justify-center rounded-2xl bg-amber-soft">
-                    <pathway.icon className="size-7 text-teal-700" aria-hidden="true" />
-                  </span>
-                  <h2 className="font-display text-2xl font-black text-navy-950">
-                    {pathway.title}
-                  </h2>
-                  <p className="mt-3 leading-relaxed text-muted-foreground">
+          <Reveal delay={0.1}>
+            <div className="mt-14 grid gap-10 overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white px-8 py-10 shadow-sm md:grid-cols-3 md:divide-x md:divide-teal-100 md:gap-0 md:px-0">
+              {pathways.map((pathway) => (
+                <div key={pathway.title} className="md:px-8">
+                  <div className="flex items-center gap-3">
+                    <pathway.icon className="size-5 shrink-0 text-teal-700" aria-hidden="true" />
+                    <h2 className="font-display text-xl font-black text-navy-950">
+                      {pathway.title}
+                    </h2>
+                  </div>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
                     {pathway.text}
                   </p>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
 
           <Reveal delay={0.2}>
             <div className="mt-14 rounded-[2rem] bg-teal-50 p-8 text-center sm:p-12">
@@ -133,7 +133,7 @@ export default function GetInvolvedPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
+                className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
               >
                 <Link href="/contact">
                   Start the conversation

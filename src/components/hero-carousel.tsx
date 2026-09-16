@@ -133,7 +133,7 @@ export function HeroCarousel({
           >
             <span
               className={cn(
-                "block h-2.5 rounded-full transition-all duration-300",
+                "block h-2.5 rounded-full transition-[transform,box-shadow] duration-300",
                 i === selected
                   ? "w-6 bg-amber-brand"
                   : "w-2.5 bg-white/80 hover:bg-white"

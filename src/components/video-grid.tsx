@@ -21,7 +21,7 @@ function VideoCard({ id, title, tag }: { id: string; title: string; tag: string 
   const [playing, setPlaying] = React.useState(false);
 
   return (
-    <figure className="overflow-hidden rounded-[1.5rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <figure className="overflow-hidden rounded-[1.5rem] border border-teal-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-video w-full bg-navy-950">
         {playing ? (
           <iframe

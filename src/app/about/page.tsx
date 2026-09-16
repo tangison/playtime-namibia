@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Landmark, ScrollText, Building2, Banknote } from "lucide-react";
+import { ArrowRight, Landmark, Building2, Banknote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading, Eyebrow } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
@@ -198,7 +198,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
             {trustees.map((trustee, i) => (
               <Reveal key={trustee.name} delay={i * 0.1}>
-                <article className="h-full overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+                <article className="h-full overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                   <div className="relative">
                     <Image
                       src={trustee.image}
@@ -234,34 +234,33 @@ export default function AboutPage() {
           <SectionHeading
             title="How the Trust is run"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {structure.map((block, i) => (
-              <Reveal key={block.title} delay={i * 0.08}>
-                <div className="h-full rounded-[1.75rem] border border-teal-100 bg-white p-7 shadow-sm">
-                  <span className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-teal-50">
-                    <block.icon className="size-6 text-teal-700" aria-hidden="true" />
-                  </span>
-                  <h2 className="font-display text-xl font-black text-navy-950">
-                    {block.title}
-                  </h2>
-                  <ul className="mt-4 space-y-2.5">
+          <Reveal delay={0.1}>
+            <div className="mt-12 grid gap-10 overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white px-8 py-10 shadow-sm md:grid-cols-3 md:divide-x md:divide-teal-100 md:gap-0 md:px-0">
+              {structure.map((block) => (
+                <div key={block.title} className="md:px-8">
+                  <div className="flex items-center gap-3">
+                    <block.icon className="size-5 shrink-0 text-teal-700" aria-hidden="true" />
+                    <h2 className="font-display text-lg font-black text-navy-950">
+                      {block.title}
+                    </h2>
+                  </div>
+                  <ul className="mt-5 space-y-2.5 md:mt-6">
                     {block.items.map((item) => (
-                      <li key={item} className="flex items-center gap-2.5 text-[15px] text-muted-foreground">
-                        <ScrollText className="size-4 shrink-0 text-teal-600" aria-hidden="true" />
+                      <li key={item} className="text-[15px] text-muted-foreground">
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-10 flex justify-center">
               <Button
                 asChild
                 size="lg"
-                className="h-13 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+                className="h-13 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
               >
                 <Link href="/partners">
                   See our partners

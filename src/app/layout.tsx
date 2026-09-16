@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { DemoSplash } from "@/components/demo-splash";
+import { DemoBadge } from "@/components/demo-badge";
 import { site } from "@/lib/site";
+
+const DEMO = process.env.DEMO_MODE === "true";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -125,12 +128,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ngoJsonLd) }}
         />
+        {DEMO && <DemoSplash />}
         <SiteHeader />
         <main id="main-content" className="flex-1">
           {children}
         </main>
         <SiteFooter />
-        <Toaster />
+        {DEMO && <DemoBadge />}
       </body>
     </html>
   );

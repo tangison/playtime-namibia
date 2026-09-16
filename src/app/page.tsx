@@ -128,7 +128,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="press-amber h-14 rounded-2xl bg-amber-brand px-7 font-display text-base font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+                  className="press-amber h-14 rounded-2xl bg-amber-brand px-7 font-display text-base font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
                 >
                   <Link href="/get-involved">
                     <HeartHandshake className="size-5" aria-hidden="true" />
@@ -260,7 +260,7 @@ export default function HomePage() {
               <Link
                 key={sport.name}
                 href="/programmes"
-                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl"
               >
                 <div className="relative">
                   <Image
@@ -329,7 +329,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="press-amber mt-8 h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+                className="press-amber mt-8 h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
               >
                 <Link href="/facilities">
                   Explore our facilities
@@ -423,7 +423,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="press-navy h-14 rounded-2xl bg-navy-950 px-7 font-display text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
+                className="press-navy h-14 rounded-2xl bg-navy-950 px-7 font-display text-base font-bold text-white transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
               >
                 <Link href="/get-involved">
                   <HeartHandshake className="size-5" aria-hidden="true" />
@@ -434,7 +434,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="h-14 rounded-2xl border-2 border-navy-950 bg-transparent px-7 font-display text-base font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-navy-950 hover:text-white"
+                className="h-14 rounded-2xl border-2 border-navy-950 bg-transparent px-7 font-display text-base font-bold text-navy-950 transition-[transform,background-color,border-color,color] hover:-translate-y-0.5 hover:bg-navy-950 hover:text-white"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>

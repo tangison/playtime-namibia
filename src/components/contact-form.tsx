@@ -37,7 +37,7 @@ export function ContactForm() {
         className="flex h-full flex-col items-center justify-center rounded-[1.75rem] border border-teal-200 bg-teal-50 p-10 text-center"
         role="status"
       >
-        <CheckCircle2 className="mb-4 size-14 text-teal-600" aria-hidden="true" />
+        <CheckCircle2 className="mb-4 size-14 text-teal-700" aria-hidden="true" />
         <h2 className="font-display text-2xl font-black text-navy-950">
           Your email app should now be open
         </h2>
@@ -116,7 +116,7 @@ export function ContactForm() {
         <Button
           type="submit"
           size="lg"
-          className="press-amber h-13 w-full rounded-2xl bg-amber-brand font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+          className="press-amber h-12 w-full rounded-2xl bg-amber-brand font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
         >
           <Send className="size-5" aria-hidden="true" />
           Send message

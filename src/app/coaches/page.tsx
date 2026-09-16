@@ -128,7 +128,7 @@ export default function CoachesPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {coaches.map((coach, i) => (
               <Reveal key={coach.name} delay={(i % 4) * 0.06}>
-                <article className="group h-full overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+                <article className="group h-full overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                   <div className="relative">
                     <Image
                       src={coach.image}
@@ -182,7 +182,7 @@ export default function CoachesPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
+              className="mt-8 h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
             >
               <Link href="/coaches-corner">
                 Visit the Coaches' Corner

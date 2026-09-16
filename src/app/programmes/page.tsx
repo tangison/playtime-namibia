@@ -135,7 +135,7 @@ export default function ProgrammesPage() {
                 <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-navy-700">
                   {code.venues.map((venue) => (
                     <li key={venue} className="flex items-center gap-1.5">
-                      <MapPin className="size-4 text-teal-600" aria-hidden="true" />
+                      <MapPin className="size-4 text-teal-700" aria-hidden="true" />
                       {venue}
                     </li>
                   ))}
@@ -162,7 +162,7 @@ export default function ProgrammesPage() {
             <Button
               asChild
               size="lg"
-              className="press-navy mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
+              className="press-navy mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
             >
               <Link href="/programmes/school-partnerships">
                 School Partnerships
