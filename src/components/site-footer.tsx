@@ -51,16 +51,20 @@ export function SiteFooter() {
                 "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
             }}
           >
-            <div className="marquee-track flex w-max items-center gap-14 pr-14">
+            <div className="marquee-track flex w-max items-center gap-8 pr-8">
               {[...sponsors, ...sponsors].map((sponsor, i) => (
-                <Image
+                <span
                   key={`${sponsor.name}-${i}`}
-                  src={sponsor.src}
-                  alt={sponsor.name}
-                  width={150}
-                  height={56}
-                  className="h-12 w-auto opacity-80 brightness-0 invert transition-opacity hover:opacity-100"
-                />
+                  className="flex h-14 w-36 shrink-0 items-center justify-center rounded-xl bg-white px-4 shadow-sm"
+                >
+                  <Image
+                    src={sponsor.src}
+                    alt={sponsor.name}
+                    width={140}
+                    height={48}
+                    className="max-h-10 w-auto object-contain"
+                  />
+                </span>
               ))}
             </div>
           </div>
@@ -104,7 +108,7 @@ export function SiteFooter() {
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 size-4 shrink-0 text-teal-300" aria-hidden="true" />
                 <span>
-                  Mon–Fri 8:00–18:00 · Sat 10:00–16:00 · Sun closed
+                  Mon-Fri 8:00-18:00, Sat 10:00-16:00, Sun closed
                 </span>
               </li>
             </ul>
@@ -135,7 +139,7 @@ export function SiteFooter() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="inline-block py-2 text-[15px] text-navy-200 transition-colors hover:text-teal-300"
+                        className="inline-flex min-h-11 items-center py-2 text-[15px] text-navy-200 transition-colors hover:text-teal-300"
                       >
                         {link.title}
                       </Link>

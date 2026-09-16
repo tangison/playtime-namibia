@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Playtime Namibia – The Playtime Sport Development Trust",
+    name: "Playtime Namibia - The Playtime Sport Development Trust",
     short_name: "Playtime",
     description:
       "Empowering youth through sports in Walvis Bay, Namibia. Est. 2015.",

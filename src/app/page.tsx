@@ -3,51 +3,60 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  Check,
   HeartHandshake,
   MapPin,
-  Trophy,
-  Users,
-  CalendarDays,
-  ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SectionHeading, Eyebrow } from "@/components/section-heading";
+import { SectionHeading } from "@/components/section-heading";
 import { StatBand } from "@/components/stat-band";
 import { Reveal } from "@/components/reveal";
-import { site } from "@/lib/site";
+import { HeroCarousel } from "@/components/hero-carousel";
+import { ScrollCarousel } from "@/components/scroll-carousel";
 
 export const metadata: Metadata = {
   title: "Playtime Namibia | Empowering Youth Through Sports in Walvis Bay",
   description:
-    "The Playtime Sport Development Trust is a charitable organisation established in 2015 in Walvis Bay, Namibia – giving children free access to soccer, cricket, athletics and multi-sports, teaching life skills through sport.",
+    "The Playtime Sport Development Trust is a charitable organisation established in 2015 in Walvis Bay, Namibia, giving children free access to soccer, cricket, athletics and multi-sports, teaching life skills through sport.",
   alternates: { canonical: "/" },
 };
 
+const heroSlides = [
+  {
+    src: "/images/hero-kids.webp",
+    alt: "Children in sports vests running across the artificial turf field at The Hub, Kuisebmond",
+  },
+  {
+    src: "/images/hub-field.webp",
+    alt: "The Hub's enclosed artificial turf field in Kuisebmond under a blue sky",
+  },
+  {
+    src: "/images/multisports.webp",
+    alt: "Young children in colourful vests playing with a portable hoop during a multi-sports session",
+  },
+];
+
 const sports = [
   {
-    number: "01",
     name: "Soccer",
     image: "/images/soccer.webp",
     alt: "Children in orange and green training bibs playing soccer on the artificial turf at The Hub",
     participants: "~1,200 participants",
-    ages: "U7 – U17, boys & girls",
+    ages: "U7-U17, boys & girls",
     description:
       "Our primary sports code. Daily training sessions, weekend mini-tournaments and games at The Hub in Kuisebmond and the Atlantis Sports Club.",
   },
   {
-    number: "02",
     name: "Cricket",
     image: "/images/cricket.webp",
     alt: "Two young cricket players in navy blue shirts holding bats and protective gear",
     participants: "~250 daily participants",
     ages: "Boys & girls",
     description:
-      "A flourishing program that has nurtured players who went on to represent the national team – bringing cricket to communities it rarely reaches.",
+      "A flourishing program that has nurtured players who went on to represent the national team, bringing cricket to communities it rarely reaches.",
   },
   {
-    number: "03",
     name: "Multi-Sports",
     image: "/images/multisports.webp",
     alt: "Young children in colourful vests playing with a portable hoop during a multi-sports session",
@@ -57,32 +66,42 @@ const sports = [
       "A scientifically proven way for younger children to build fundamental movement skills and physical literacy before their teen years.",
   },
   {
-    number: "04",
     name: "Athletics",
     image: "/images/athletics.webp",
     alt: "A boy in a yellow IAAF vest running with a relay baton at athletics training",
     participants: "~85 participants",
-    ages: "U9 – U19",
+    ages: "U9-U19",
     description:
       "Track and field training three times a week, preparing athletes for school, regional and national competition.",
   },
+];
+
+const stripPhotos = [
+  { src: "/images/g-02.webp", alt: "A large group of children in colourful vests celebrating with medals and a trophy in front of the Michale Sheehan Stand", caption: "Medal day at the Michale Sheehan Stand" },
+  { src: "/images/g-05.webp", alt: "Children competing for the ball during a match while adults watch from the sidelines", caption: "Match day action" },
+  { src: "/images/g-07.webp", alt: "Three young children sitting on the grass assembling colourful foam puzzle mats", caption: "Multi-sports for the little ones" },
+  { src: "/images/g-10.webp", alt: "Children in sports vests celebrating with medals and a large trophy", caption: "Trophy celebrations" },
+  { src: "/images/g-16.webp", alt: "A girl practising her dribbling skills through cones during a soccer training session", caption: "Dribbling practice" },
+  { src: "/images/g-20.webp", alt: "A young girl in a red vest practising barefoot dribbling around cones on the artificial turf pitch", caption: "Barefoot skills session" },
+  { src: "/images/g-27.webp", alt: "Children in blue training bibs running and playing with a soccer ball on a sunny day", caption: "Running with the ball" },
+  { src: "/images/g-29.webp", alt: "Children competing for the ball during a lively soccer match on the green field", caption: "Full-throttle football" },
 ];
 
 export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="pitch-motif relative overflow-hidden bg-gradient-to-b from-teal-50 via-background to-background">
+      <section className="bg-gradient-to-b from-teal-50 via-background to-background">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-2 lg:gap-10 lg:pb-24 lg:pt-20 xl:gap-16">
           <div>
             <Reveal>
-              <Badge className="mb-6 gap-2 rounded-full border-teal-200 bg-white px-4 py-2 font-display text-xs font-bold uppercase tracking-[0.14em] text-teal-800 shadow-sm">
+              <Badge className="gap-2 rounded-full border-teal-200 bg-white px-4 py-2 font-display text-xs font-bold uppercase tracking-[0.14em] text-teal-800 shadow-sm">
                 <MapPin className="size-3.5" aria-hidden="true" />
-                Walvis Bay · Namibia · Est. 2015
+                Walvis Bay, Namibia
               </Badge>
-              <h1 className="text-balance font-display text-[42px] font-black leading-[1.02] tracking-tight text-navy-950 sm:text-6xl lg:text-[68px]">
+              <h1 className="mt-6 text-balance font-display text-[42px] font-black leading-[1.04] text-navy-950 sm:text-6xl lg:text-[68px]">
                 Empowering{" "}
-                <span className="relative inline-block text-teal-600">
+                <span className="relative inline-block">
                   Youth
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
@@ -93,7 +112,7 @@ export default function HomePage() {
                   >
                     <path
                       d="M2 9C60 3 140 3 198 9"
-                      stroke="#f5b301"
+                      stroke="var(--color-amber-brand)"
                       strokeWidth="5"
                       strokeLinecap="round"
                     />
@@ -102,90 +121,49 @@ export default function HomePage() {
                 Through Sports
               </h1>
               <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                The Playtime Sport Development Trust is a non-governmental
-                charitable organisation giving children and young people of all
-                ages free access to sport – and the life skills that come with
-                it. {site.missionLine}
+                Free access to sport for every child in Walvis Bay, and the
+                life skills that come with it.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <Button
                   asChild
                   size="lg"
-                  className="h-14 rounded-2xl bg-amber-brand px-7 font-display text-base font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634] hover:shadow-[0_7px_0_0_#c78f00]"
+                  className="press-amber h-14 rounded-2xl bg-amber-brand px-7 font-display text-base font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
                 >
                   <Link href="/get-involved">
                     <HeartHandshake className="size-5" aria-hidden="true" />
                     Get Involved
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="h-14 rounded-2xl border-2 border-navy-900 bg-transparent px-7 font-display text-base font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-navy-950 hover:text-white"
+                <Link
+                  href="/programmes"
+                  className="group inline-flex min-h-11 items-center gap-2 py-2 font-display text-base font-bold text-navy-950 underline-offset-4 transition-colors hover:text-teal-700 hover:underline"
                 >
-                  <Link href="/programmes">
-                    Our Programmes
-                    <ArrowRight className="size-5" aria-hidden="true" />
-                  </Link>
-                </Button>
+                  Our Programmes
+                  <ArrowRight
+                    className="size-4 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </Link>
               </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-navy-700">
-                <li className="flex items-center gap-2">
-                  <ShieldCheck className="size-4 text-teal-600" aria-hidden="true" />
-                  Free access for every child
-                </li>
-                <li className="flex items-center gap-2">
-                  <Users className="size-4 text-teal-600" aria-hidden="true" />
-                  4 disciplines, U7 to U19
-                </li>
-                <li className="flex items-center gap-2">
-                  <CalendarDays className="size-4 text-teal-600" aria-hidden="true" />
-                  Training every week
-                </li>
-              </ul>
             </Reveal>
           </div>
 
-          {/* Hero visual */}
+          {/* Hero visual: photo slider */}
           <Reveal delay={0.12} className="relative">
-            <div
-              className="absolute -right-6 -top-6 z-0 h-40 w-40 rounded-full bg-amber-brand/30 blur-2xl"
-              aria-hidden="true"
-            />
             <div className="relative z-10">
               <div className="overflow-hidden rounded-[2rem] border-4 border-white shadow-2xl">
-                <Image
-                  src="/images/hero-kids.webp"
-                  alt="Children in sports vests running across the artificial turf field at The Hub, Kuisebmond"
-                  width={1024}
-                  height={1024}
-                  priority
-                  fetchPriority="high"
-                  sizes="(min-width: 1024px) 44rem, 100vw"
-                  className="aspect-[4/4.4] w-full object-cover sm:aspect-[4/3.4] lg:aspect-[4/4.2]"
+                <HeroCarousel
+                  slides={heroSlides}
+                  className="aspect-[4/4.4] sm:aspect-[4/3.4] lg:aspect-[4/4.2]"
                 />
               </div>
-              {/* floating sticker */}
+              {/* established sticker */}
               <div className="absolute -left-4 -top-5 rotate-[-6deg] rounded-2xl bg-navy-950 px-5 py-3 font-display font-black text-white shadow-xl sm:-left-8">
                 <p className="text-2xl leading-none text-amber-brand">2015</p>
                 <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
                   Established
                 </p>
-              </div>
-              {/* floating stat chip */}
-              <div className="absolute -bottom-6 right-4 flex rotate-[2deg] items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-xl sm:right-8">
-                <span className="flex size-11 items-center justify-center rounded-xl bg-teal-50">
-                  <Trophy className="size-5 text-teal-600" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="font-display text-xl font-black leading-none text-navy-950">
-                    1,200+
-                  </p>
-                  <p className="mt-1 text-xs font-medium text-muted-foreground">
-                    kids playing soccer weekly
-                  </p>
-                </div>
               </div>
             </div>
           </Reveal>
@@ -220,20 +198,13 @@ export default function HomePage() {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
-              <div
-                className="absolute -left-3 top-1/2 rotate-[-4deg] rounded-full bg-teal-600 px-4 py-2 font-display text-xs font-bold uppercase tracking-widest text-white shadow-lg"
-                aria-hidden="true"
-              >
-                One child at a time
-              </div>
             </div>
           </Reveal>
 
           <div className="order-1 lg:order-2">
             <SectionHeading
-              eyebrow="Who we are"
               title="A key player in Namibian youth sport"
-              lead="Playtime aims to give as many children and young people as possible free access to sports activities – teaching them life skills with the help of sport, and promoting their development, education and empowerment."
+              lead="Playtime gives as many children and young people as possible free access to sports activities, teaching them life skills with the help of sport and promoting their development, education and empowerment."
             />
             <Reveal delay={0.1}>
               <p className="mt-4 leading-relaxed text-muted-foreground">
@@ -249,79 +220,78 @@ export default function HomePage() {
                   (tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800"
+                      className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800"
                     >
-                      <Sparkles className="size-3.5" aria-hidden="true" />
                       {tag}
                     </span>
                   )
                 )}
               </div>
-              <Button
-                asChild
-                variant="link"
-                className="mt-8 h-11 gap-2 px-0 font-display text-base font-bold text-teal-700"
+              <Link
+                href="/about"
+                className="group mt-8 inline-flex min-h-11 items-center gap-2 py-2 font-display text-base font-bold text-teal-700 underline-offset-4 hover:underline"
               >
-                <Link href="/about">
-                  More about the Trust
-                  <ArrowRight className="size-4" aria-hidden="true" />
-                </Link>
-              </Button>
+                More about the Trust
+                <ArrowRight
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* ── Sports codes ─────────────────────────────────── */}
+      {/* ── Sports codes carousel ────────────────────────── */}
       <section className="bg-gradient-to-b from-background to-teal-50/60 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
-            eyebrow="What we do"
             title="Four disciplines, one goal"
             lead="Each programme develops participants through sport into well-rounded individuals who can contribute positively to their communities."
+            className="max-w-2xl"
           />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-            {sports.map((sport, i) => (
-              <Reveal key={sport.name} delay={i * 0.08}>
-                <Link
-                  href="/programmes"
-                  className="group block h-full overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-                >
-                  <div className="relative">
-                    <Image
-                      src={sport.image}
-                      alt={sport.alt}
-                      width={800}
-                      height={600}
-                      loading="lazy"
-                      sizes="(min-width: 1280px) 20rem, (min-width: 640px) 45vw, 100vw"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <span className="absolute left-4 top-4 rounded-lg bg-navy-950/85 px-2.5 py-1.5 font-display text-sm font-black text-amber-brand">
-                      {sport.number}
+          <ScrollCarousel
+            label="Sports programmes"
+            className="mt-12"
+            itemClass="w-[86%] sm:w-[46%] lg:w-[31.5%]"
+          >
+            {sports.map((sport) => (
+              <Link
+                key={sport.name}
+                href="/programmes"
+                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-teal-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+              >
+                <div className="relative">
+                  <Image
+                    src={sport.image}
+                    alt={sport.alt}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    sizes="(min-width: 1024px) 26rem, (min-width: 640px) 45vw, 86vw"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-2xl font-black text-navy-950">
+                    {sport.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {sport.description}
+                  </p>
+                  <div className="mt-auto flex flex-wrap gap-2 pt-4">
+                    <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-teal-800">
+                      {sport.participants}
+                    </span>
+                    <span className="rounded-full bg-navy-50 px-3 py-1 text-xs font-bold text-navy-700">
+                      {sport.ages}
                     </span>
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-2xl font-black text-navy-950">
-                      {sport.name}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {sport.description}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-teal-800">
-                        {sport.participants}
-                      </span>
-                      <span className="rounded-full bg-navy-50 px-3 py-1 text-xs font-bold text-navy-700">
-                        {sport.ages}
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </Reveal>
+                </div>
+              </Link>
             ))}
-          </div>
+          </ScrollCarousel>
         </div>
       </section>
 
@@ -331,12 +301,11 @@ export default function HomePage() {
           <div>
             <SectionHeading
               dark
-              eyebrow="Our home ground"
-              title="The Hub – the heart of sport in Kuisebmond"
+              title="The Hub, the heart of sport in Kuisebmond"
               lead="Crafted by Playtime since 2017 and nestled next to the iconic Blue Waters Stadium, our premier facility sets the standard for sporting venues in the region."
             />
             <Reveal delay={0.1}>
-              <ul className="mt-8 grid grid-cols-2 gap-3">
+              <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {[
                   "40 × 40 m enclosed artificial turf",
                   "Spectator stand",
@@ -349,8 +318,8 @@ export default function HomePage() {
                     key={amenity}
                     className="flex min-h-11 items-center gap-2.5 rounded-xl bg-white/5 px-4 py-2.5 text-sm font-medium text-navy-100"
                   >
-                    <span
-                      className="size-2 shrink-0 rounded-full bg-amber-brand"
+                    <Check
+                      className="size-4 shrink-0 text-teal-300"
                       aria-hidden="true"
                     />
                     {amenity}
@@ -360,7 +329,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+                className="press-amber mt-8 h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
               >
                 <Link href="/facilities">
                   Explore our facilities
@@ -381,9 +350,9 @@ export default function HomePage() {
                 className="aspect-[16/10] w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-5 -left-3 rotate-[-3deg] rounded-2xl bg-amber-brand px-5 py-3 font-display font-black text-navy-950 shadow-xl sm:-left-6">
-              <p className="text-lg leading-none">Since 2017</p>
-              <p className="mt-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <div className="absolute -bottom-5 -left-3 rotate-[-3deg] rounded-2xl bg-navy-950 px-5 py-3 font-display font-black shadow-xl ring-1 ring-white/15 sm:-left-6">
+              <p className="text-lg leading-none text-amber-brand">2017</p>
+              <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
                 built by Playtime
               </p>
             </div>
@@ -391,11 +360,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Photo strip ──────────────────────────────────── */}
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-6 px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Moments from the field"
+            lead="Training sessions, medal days and everything in between."
+            className="max-w-xl"
+          />
+          <Link
+            href="/gallery"
+            className="group inline-flex min-h-11 items-center gap-2 py-2 font-display text-base font-bold text-teal-700 underline-offset-4 hover:underline"
+          >
+            View the full gallery
+            <ArrowRight
+              className="size-4 transition-transform group-hover:translate-x-1"
+              aria-hidden="true"
+            />
+          </Link>
+        </div>
+        <ScrollCarousel
+          label="Photo highlights"
+          bleed
+          className="mt-10"
+          itemClass="w-[72%] sm:w-[44%] lg:w-[26%]"
+        >
+          {stripPhotos.map((photo) => (
+            <figure key={photo.src} className="pb-2">
+              <div className="overflow-hidden rounded-[1.5rem] border-4 border-white shadow-lg">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 22rem, (min-width: 640px) 44vw, 72vw"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 px-1 text-sm font-medium text-muted-foreground">
+                {photo.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </ScrollCarousel>
+      </section>
+
       {/* ── Get involved CTA ─────────────────────────────── */}
       <section className="bg-amber-soft py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
-            <Eyebrow className="justify-center">Join the team</Eyebrow>
             <h2 className="text-balance font-display text-3xl font-black leading-tight text-navy-950 sm:text-5xl">
               Help us build brighter futures,{" "}
               <span className="text-teal-700">one child at a time</span>
@@ -409,7 +423,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="h-14 rounded-2xl bg-navy-950 px-7 font-display text-base font-bold text-white shadow-[0_5px_0_0_#041420] transition-all hover:-translate-y-0.5 hover:bg-navy-900"
+                className="press-navy h-14 rounded-2xl bg-navy-950 px-7 font-display text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
               >
                 <Link href="/get-involved">
                   <HeartHandshake className="size-5" aria-hidden="true" />

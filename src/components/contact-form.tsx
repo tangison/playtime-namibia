@@ -25,7 +25,7 @@ export function ContactForm() {
 
     const subject = encodeURIComponent(`Website enquiry from ${name}`);
     const body = encodeURIComponent(
-      `Hi Playtime Namibia,\n\n${message}\n\n–\nName: ${name}\nE-mail: ${email}`
+      `Hi Playtime Namibia,\n\n${message}\n\nName: ${name}\nE-mail: ${email}`
     );
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
     setSent(true);
@@ -108,7 +108,7 @@ export function ContactForm() {
             className="mt-2 min-h-32 rounded-xl"
           />
         </div>
-        {/* Honeypot – hidden from humans, catnip for bots */}
+        {/* Honeypot: hidden from humans, catnip for bots */}
         <div className="hidden" aria-hidden="true">
           <Label htmlFor="contact-company">Company</Label>
           <Input id="contact-company" name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -116,13 +116,13 @@ export function ContactForm() {
         <Button
           type="submit"
           size="lg"
-          className="h-13 w-full rounded-2xl bg-amber-brand font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+          className="press-amber h-13 w-full rounded-2xl bg-amber-brand font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
         >
           <Send className="size-5" aria-hidden="true" />
           Send message
         </Button>
         <p className="text-center text-sm text-muted-foreground">
-          This form opens your email app with the message ready – no tracking,
+          This form opens your email app with the message ready, with no tracking,
           no cookies.
         </p>
       </div>

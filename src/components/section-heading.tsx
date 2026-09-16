@@ -5,11 +5,10 @@ export function Eyebrow({ children, className }: { children: React.ReactNode; cl
   return (
     <p
       className={cn(
-        "mb-3 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-teal-700",
+        "mb-3 font-display text-xs font-bold uppercase tracking-[0.18em] text-teal-700",
         className
       )}
     >
-      <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-brand" aria-hidden="true" />
       {children}
     </p>
   );

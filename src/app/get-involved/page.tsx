@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Get Involved",
   description:
-    "Volunteer your time, explore sponsorship opportunities, or simply spread the word – help Playtime Namibia create positive change and bright futures for children in Walvis Bay.",
+    "Volunteer your time, explore sponsorship opportunities, or simply spread the word. Help Playtime Namibia create positive change and bright futures for children in Walvis Bay.",
   alternates: { canonical: "/get-involved" },
 };
 
@@ -18,7 +18,7 @@ const pathways = [
   {
     icon: HandHeart,
     title: "Volunteer with us",
-    text: "Give your time and skills – on the field, behind the scenes, or wherever you can help. Every hour makes a difference to a child in Walvis Bay.",
+    text: "Give your time and skills: on the field, behind the scenes, or wherever you can help. Every hour makes a difference to a child in Walvis Bay.",
   },
   {
     icon: Package,
@@ -28,7 +28,7 @@ const pathways = [
   {
     icon: Megaphone,
     title: "Spread the word",
-    text: "Follow our stories, share our events and tell the community what's happening at The Hub – visibility multiplies every contribution.",
+    text: "Follow our stories, share our events and tell the community what's happening at The Hub. Visibility multiplies every contribution.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function GetInvolvedPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="h-14 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+                  className="h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
                 >
                   <Link href="/contact">
                     <Mail className="size-5" aria-hidden="true" />
@@ -133,7 +133,7 @@ export default function GetInvolvedPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white shadow-[0_5px_0_0_#041420] transition-all hover:-translate-y-0.5 hover:bg-navy-900"
+                className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
               >
                 <Link href="/contact">
                   Start the conversation

@@ -10,7 +10,7 @@ import { sponsors } from "@/lib/site";
 export const metadata: Metadata = {
   title: "International Partners",
   description:
-    "Playtime Namibia's international partners: Global United FC (Germany) and ASC Göttingen – plus the local sponsors who keep our teams playing.",
+    "Playtime Namibia's international partners: Global United FC (Germany) and ASC Göttingen, plus the local sponsors who keep our teams playing.",
   alternates: { canonical: "/partners" },
 };
 
@@ -26,7 +26,7 @@ export default function PartnersPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               From climate-action football in Germany to a decade-long coach
-              exchange programme – Playtime's reach extends well beyond Walvis
+              exchange programme. Playtime's reach extends well beyond Walvis
               Bay.
             </p>
           </Reveal>
@@ -174,7 +174,6 @@ export default function PartnersPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
-            eyebrow="Local sponsors"
             title="A thank you to our long-term sponsors"
             lead="None of this happens without the businesses of Walvis Bay backing us, week in and week out."
           />
@@ -203,7 +202,7 @@ export default function PartnersPage() {
               <Button
                 asChild
                 size="lg"
-                className="h-14 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+                className="h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
               >
                 <Link href="/get-involved">
                   <HeartHandshake className="size-5" aria-hidden="true" />

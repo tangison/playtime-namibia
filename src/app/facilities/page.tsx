@@ -7,7 +7,7 @@ import { SectionHeading, Eyebrow } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
-  title: "Facilities – The Hub & Atlantis",
+  title: "Facilities: The Hub & Atlantis",
   description:
     "The Hub in Kuisebmond, Walvis Bay: a state-of-the-art enclosed artificial turf field built by Playtime since 2017, plus the Atlantis sports grounds in town.",
   alternates: { canonical: "/facilities" },
@@ -36,7 +36,7 @@ export default function FacilitiesPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               From our flagship Hub in Kuisebmond to the Atlantis sports
-              grounds in town – every child in Walvis Bay is never far from a
+              grounds in town. Every child in Walvis Bay is never far from a
               Playtime venue.
             </p>
           </Reveal>
@@ -65,8 +65,8 @@ export default function FacilitiesPage() {
                     Centrally located next to the iconic Blue Waters Stadium
                     and amidst the bustling primary shopping district, The Hub
                     is a bustling epicentre where all major activities are
-                    orchestrated with precision. Our flagship offering – the
-                    Hub Playtime sports field facility – boasts a
+                    orchestrated with precision. Our flagship offering, the
+                    Hub Playtime sports field facility, boasts a
                     state-of-the-art enclosed artificial turf field measuring
                     40 × 40 metres.
                   </p>
@@ -155,7 +155,7 @@ export default function FacilitiesPage() {
                   ~250 weekly participants
                 </span>
                 <span className="rounded-full bg-white/10 px-5 py-2.5 font-display text-sm font-bold text-teal-300">
-                  U7 – U17 · boys & girls
+                  U7-U17, boys & girls
                 </span>
                 <span className="rounded-full bg-white/10 px-5 py-2.5 font-display text-sm font-bold text-teal-300">
                   Home of Atlantis Sport Club
@@ -194,7 +194,7 @@ export default function FacilitiesPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white shadow-[0_5px_0_0_#041420] transition-all hover:-translate-y-0.5 hover:bg-navy-900"
+              className="mt-8 h-14 rounded-2xl press-navy bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
             >
               <Link href="/contact">
                 Contact us

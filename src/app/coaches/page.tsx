@@ -9,7 +9,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Coaching Team",
   description:
-    "Meet the Playtime Namibia coaching team – head coaches, senior coaches and junior coaches developing young players at The Hub in Kuisebmond and the Atlantis Sports Club, Walvis Bay.",
+    "Meet the Playtime Namibia coaching team: head coaches, senior coaches and junior coaches developing young players at The Hub in Kuisebmond and the Atlantis Sports Club, Walvis Bay.",
   alternates: { canonical: "/coaches" },
 };
 
@@ -116,7 +116,7 @@ export default function CoachesPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               From head coaches to juniors who came up through the Playtime
-              ranks themselves – this is the team that trains more than a
+              ranks themselves. This is the team that trains more than a
               thousand children a week across Walvis Bay.
             </p>
           </Reveal>
@@ -182,7 +182,7 @@ export default function CoachesPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+              className="mt-8 h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
             >
               <Link href="/coaches-corner">
                 Visit the Coaches' Corner

@@ -10,8 +10,8 @@ export const site = {
   phoneHref: "tel:+26464279650",
   email: "info@playtime.com.na",
   hours: [
-    { days: "Monday – Friday", time: "8:00 – 18:00" },
-    { days: "Saturday", time: "10:00 – 16:00" },
+    { days: "Monday-Friday", time: "8:00-18:00" },
+    { days: "Saturday", time: "10:00-16:00" },
     { days: "Sunday", time: "Closed" },
   ],
   facebook: "https://www.facebook.com/playtimenamibia",
@@ -69,12 +69,12 @@ export const navItems: NavItem[] = [
 ];
 
 export const sponsors = [
-  { name: "Cavema Fishing", src: "/images/sponsor-cavema.webp", type: "webp" as const },
-  { name: "Hydroweld Walvis Bay", src: "/images/sponsor-hydroweld.png", type: "png" as const },
-  { name: "Namibia Ship Chandlers", src: "/images/sponsor-namibia-ship-chandlers.png", type: "png" as const },
-  { name: "OTB Sport", src: "/images/sponsor-otb.png", type: "png" as const },
-  { name: "Global United FC", src: "/images/sponsor-global-united.png", type: "png" as const },
-  { name: "Atlantis Sport Club", src: "/images/sponsor-atlantis.webp", type: "webp" as const },
+  { name: "Cavema Fishing", src: "/images/sponsor-cavema.webp" },
+  { name: "Hydroweld Walvis Bay", src: "/images/sponsor-hydroweld.png" },
+  { name: "Namibia Ship Chandlers", src: "/images/sponsor-namibia-ship-chandlers.png" },
+  { name: "OTB Sport", src: "/images/sponsor-otb.webp" },
+  { name: "Global United FC", src: "/images/sponsor-global-united.webp" },
+  { name: "Atlantis Sport Club", src: "/images/sponsor-atlantis.webp" },
 ];
 
 export function absoluteUrl(path: string) {

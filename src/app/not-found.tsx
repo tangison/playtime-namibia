@@ -28,7 +28,7 @@ export default function NotFound() {
           <Button
             asChild
             size="lg"
-            className="h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+            className="h-13 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
           >
             <Link href="/">
               <Home className="size-5" aria-hidden="true" />

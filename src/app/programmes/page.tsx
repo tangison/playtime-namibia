@@ -7,7 +7,7 @@ import { SectionHeading, Eyebrow } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
-  title: "Sports Codes – Our Programmes",
+  title: "Sports Codes: Our Programmes",
   description:
     "Soccer, cricket, multi-sports and athletics in Walvis Bay: free daily training for children from U7 to U19, run by the Playtime Sport Development Trust at The Hub and Atlantis Sports Club.",
   alternates: { canonical: "/programmes" },
@@ -19,10 +19,10 @@ const codes = [
     name: "Soccer",
     image: "/images/soccer.webp",
     alt: "Children in orange and green training bibs playing soccer on the artificial turf at The Hub",
-    stats: ["~1,200 participants in Kuisebmond", "U7 – U17 · boys & girls", "Daily training + weekend games"],
+    stats: ["~1,200 participants in Kuisebmond", "U7-U17, boys & girls", "Daily training + weekend games"],
     body: [
       "Soccer is Playtime's primary sports code. We proudly cater to both boys' and girls' soccer teams, from under 7 to under 17, with approximately 1,200 participants in Kuisebmond alone.",
-      "Our soccer programme offers daily training sessions for players of all ages, and we host mini-tournaments and games on weekends. Activities are held at two venues – The Hub in Kuisebmond and the Atlantis Sports Club in town – with the majority of participants training at the state-of-the-art Hub facility.",
+      "Our soccer programme offers daily training sessions for players of all ages, and we host mini-tournaments and games on weekends. Activities are held at two venues (The Hub in Kuisebmond and the Atlantis Sports Club in town), with the majority of participants training at the state-of-the-art Hub facility.",
     ],
     venues: ["The Hub, Kuisebmond", "Atlantis Sports Club"],
   },
@@ -34,7 +34,7 @@ const codes = [
     stats: ["~250 daily participants", "Male & female players", "National-team pathway"],
     body: [
       "Playtime provides a flourishing cricket programme that has nurtured players who have gone on to represent the national team. Our programme accommodates both male and female players, with a current daily participation rate of approximately 250 individuals.",
-      "It is a source of pride for us to have sustained this programme for several years – especially since cricket is not easily accessible to disadvantaged communities, depriving a significant segment of the population of participation in a key sporting discipline.",
+      "It is a source of pride for us to have sustained this programme for several years, especially since cricket is not easily accessible to disadvantaged communities, depriving a significant segment of the population of participation in a key sporting discipline.",
     ],
     venues: ["The Hub cricket ground", "Cricket batting nets"],
   },
@@ -55,10 +55,10 @@ const codes = [
     name: "Athletics",
     image: "/images/athletics.webp",
     alt: "A boy in a yellow IAAF vest running with a relay baton during athletics training",
-    stats: ["~85 participants", "U9 – U19 · boys & girls", "Training 3× per week"],
+    stats: ["~85 participants", "U9-U19, boys & girls", "Training 3× per week"],
     body: [
       "Our athletics programme presently caters to around 85 participants, comprising both male and female individuals. The programme encompasses a wide range of track and field events and is open to individuals aged between under 9 and under 19 years.",
-      "Training sessions are held three times a week, with the primary aim of preparing our athletes for various competitions – including those at school level, as well as regional and national athletics meets.",
+      "Training sessions are held three times a week, with the primary aim of preparing our athletes for various competitions, including those at school level as well as regional and national athletics meets.",
     ],
     venues: ["Track & field training", "School, regional & national meets"],
   },
@@ -156,13 +156,13 @@ export default function ProgrammesPage() {
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-navy-700">
               From early-morning multi-sports for under-7s to running Walvis
-              Bay's annual school football leagues – find out how Playtime
+              Bay's annual school football leagues. Find out how Playtime
               partners with schools.
             </p>
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white shadow-[0_5px_0_0_#041420] transition-all hover:-translate-y-0.5 hover:bg-navy-900"
+              className="press-navy mt-8 h-14 rounded-2xl bg-navy-950 px-7 font-display font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-900 active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-navy-deep)]"
             >
               <Link href="/programmes/school-partnerships">
                 School Partnerships

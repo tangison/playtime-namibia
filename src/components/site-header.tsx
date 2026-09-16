@@ -4,7 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, ArrowRight, HeartHandshake } from "lucide-react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { Menu, ArrowRight, HeartHandshake } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import {
   NavigationMenu,
@@ -23,13 +24,15 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const { scrollY } = useScroll();
 
   React.useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    setScrolled(window.scrollY > 8);
   }, []);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 8);
+  });
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -53,7 +56,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2"
-          aria-label="Playtime Namibia – home"
+          aria-label="Playtime Namibia home"
         >
           <Image
             src="/images/logo.png"
@@ -134,7 +137,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Button
             asChild
-            className="hidden h-11 rounded-xl bg-amber-brand px-5 font-display font-bold text-navy-950 shadow-[0_4px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634] hover:shadow-[0_6px_0_0_#c78f00] sm:inline-flex"
+            className="press-amber hidden h-11 rounded-xl bg-amber-brand px-5 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[2px] active:shadow-[0_2px_0_0_var(--color-amber-deep)] sm:inline-flex"
           >
             <Link href="/get-involved">
               <HeartHandshake className="size-4" aria-hidden="true" />
@@ -222,7 +225,6 @@ export function SiteHeader() {
           </Sheet>
         </div>
       </div>
-      <ChevronDown className="hidden" aria-hidden="true" />
     </header>
   );
 }

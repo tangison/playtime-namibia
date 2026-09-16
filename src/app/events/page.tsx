@@ -8,7 +8,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Events & News",
   description:
-    "The latest activities and events from Playtime Namibia across all sports disciplines – tournaments, medal days and community news from Walvis Bay.",
+    "The latest activities and events from Playtime Namibia across all sports disciplines: tournaments, medal days and community news from Walvis Bay.",
   alternates: { canonical: "/events" },
 };
 
@@ -122,11 +122,11 @@ export default function EventsPage() {
                     <div className="rounded-2xl bg-teal-50 p-5">
                       <p className="flex items-center gap-2 font-display text-lg font-black text-navy-950">
                         <Trophy className="size-5 text-teal-600" aria-hidden="true" />
-                        Final result: The Navy 4 – 1 Red Team
+                        Final result: The Navy 4-1 Red Team
                       </p>
                       <p className="mt-1.5 text-sm text-teal-900">
                         In a dynamic and well-fought match, The Navy emerged
-                        victorious with an impressive 4–1 win.
+                        victorious with an impressive 4-1 win.
                       </p>
                     </div>
                     <p>

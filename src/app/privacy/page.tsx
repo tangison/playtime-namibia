@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Notice",
   description:
-    "How Playtime Namibia handles your personal information on this website – plainly and briefly.",
+    "How Playtime Namibia handles your personal information on this website, plainly and briefly.",
   alternates: { canonical: "/privacy" },
   robots: { index: false },
 };

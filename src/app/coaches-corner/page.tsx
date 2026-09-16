@@ -7,7 +7,7 @@ import { VideoGrid } from "@/components/video-grid";
 export const metadata: Metadata = {
   title: "Coaches' Corner",
   description:
-    "A growing collection of coaching resources for the Playtime Namibia coaching community – drills, lessons and video tutorials for youth soccer and goalkeeping.",
+    "A growing collection of coaching resources for the Playtime Namibia coaching community: drills, lessons and video tutorials for youth soccer and goalkeeping.",
   alternates: { canonical: "/coaches-corner" },
 };
 
@@ -24,7 +24,7 @@ export default function CoachesCornerPage() {
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               This dedicated space is designed to support and inspire our
               local coaching community. Here you'll find a growing collection
-              of valuable resources – insightful articles, practical coaching
+              of valuable resources: insightful articles, practical coaching
               lessons, helpful videos and more.
             </p>
           </Reveal>

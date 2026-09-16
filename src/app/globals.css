@@ -67,7 +67,10 @@
   --color-navy-950: #081c2a;
 
   --color-amber-brand: #f5b301;
+  --color-amber-bright: #ffc634;
+  --color-amber-deep: #c78f00;
   --color-amber-soft: #fff4d6;
+  --color-navy-deep: #041420;
 }
 
 :root {
@@ -149,25 +152,63 @@
   .text-balance {
     text-wrap: balance;
   }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
-/* ── Pitch centre-circle motif ─────────────────────────── */
-.pitch-motif {
-  position: relative;
-  isolation: isolate;
+/* ── Browser surfaces, themed from the palette ────────── */
+::selection {
+  background: var(--color-amber-brand);
+  color: var(--color-navy-950);
 }
-.pitch-motif::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: radial-gradient(circle at center, transparent 0, transparent 62%, color-mix(in oklab, var(--color-teal-600) 14%, transparent) 62.2%, color-mix(in oklab, var(--color-teal-600) 14%, transparent) 63%, transparent 63.2%), radial-gradient(circle at center, transparent 0, transparent 30%, color-mix(in oklab, var(--color-teal-600) 10%, transparent) 30.2%, color-mix(in oklab, var(--color-teal-600) 10%, transparent) 30.8%, transparent 31%);
-  background-size: 560px 560px;
-  background-position: center;
-  pointer-events: none;
+html {
+  caret-color: var(--color-teal-700);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-teal-600) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal-600);
+  border-radius: 8px;
+  border: 2px solid var(--background);
 }
 
-/* ── Sponsor marquee ───────────────────────────────────── */
+/* ── Press-depth device for primary buttons ───────────── */
+.press-amber {
+  box-shadow: 0 5px 0 0 var(--color-amber-deep);
+}
+.press-amber:hover {
+  box-shadow: 0 7px 0 0 var(--color-amber-deep);
+}
+.press-amber:active {
+  box-shadow: 0 2px 0 0 var(--color-amber-deep);
+}
+.press-navy {
+  box-shadow: 0 5px 0 0 var(--color-navy-deep);
+}
+.press-navy:hover {
+  box-shadow: 0 7px 0 0 var(--color-navy-deep);
+}
+.press-navy:active {
+  box-shadow: 0 2px 0 0 var(--color-navy-deep);
+}
+
+/* Hide native bar on carousel tracks (dots and arrows are the controls) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Sponsor marquee ───────────────────────────────── */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

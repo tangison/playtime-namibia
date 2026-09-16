@@ -24,7 +24,7 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               To find out more about Playtime Namibia, feel free to contact us
-              directly using the information below – or use the online form to
+              directly using the information below, or use the online form to
               send us an email.
             </p>
           </Reveal>

@@ -25,7 +25,7 @@ export default function SchoolPartnershipsPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               Playtime manages multi-sport programmes on behalf of schools in
-              the locale – and keeps school football in Walvis Bay alive,
+              the locale, and keeps school football in Walvis Bay alive,
               organised and thriving.
             </p>
           </Reveal>
@@ -133,7 +133,7 @@ export default function SchoolPartnershipsPage() {
                 </p>
                 <p>
                   Playtime has provided relief to the schools of these vital
-                  functions – including scheduling, administration, venue
+                  functions, including scheduling, administration, venue
                   selection, and provision of referees and other resources
                   required on the ground. By doing so, Walvis Bay now has a
                   well-run, organised, successful and stable annual school
@@ -182,7 +182,7 @@ export default function SchoolPartnershipsPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 h-14 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+              className="press-amber mt-8 h-14 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
             >
               <Link href="/contact">
                 Get in touch

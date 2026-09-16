@@ -9,7 +9,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The Playtime Sport Development Trust – a registered charitable trust established in 2015 in Walvis Bay, Namibia. Our philosophy, our trustees, and how the Trust is run.",
+    "The Playtime Sport Development Trust: a registered charitable trust established in 2015 in Walvis Bay, Namibia. Our philosophy, our trustees, and how the Trust is run.",
   alternates: { canonical: "/about" },
 };
 
@@ -19,7 +19,7 @@ const trustees = [
     role: "Trustee",
     image: "/images/trustee-eliphas.webp",
     alt: "Eliphas Shivute, trustee, wearing a blue and black zip-up jacket",
-    bio: "A distinguished Namibian retired international footballer and accomplished businessman. One of the most successful soccer players in Namibian history, he played professionally in China, Europe and domestically – the first Namibian to play for a top-level European team, and the scorer of the first international goal for the Brave Warriors. Since retiring from football, Eliphas has enjoyed continued success in the business world.",
+    bio: "A distinguished Namibian retired international footballer and accomplished businessman. One of the most successful soccer players in Namibian history, he played professionally in China, Europe and domestically. He was the first Namibian to play for a top-level European team, and the scorer of the first international goal for the Brave Warriors. Since retiring from football, Eliphas has enjoyed continued success in the business world.",
   },
   {
     name: "Sandro De Gouveia",
@@ -45,8 +45,8 @@ const structure = [
       "Registered Trust",
       "Founder & three Trustees",
       "Trust Deed",
-      "Auditors – WBM",
-      "Bankers – Bank Windhoek",
+      "Auditors: WBM",
+      "Bankers: Bank Windhoek",
       "Management Structures",
     ],
   },
@@ -94,7 +94,6 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div>
             <SectionHeading
-              eyebrow="Our mission"
               title="Free access to sport, and the life skills it teaches"
             />
             <Reveal delay={0.1}>
@@ -165,7 +164,7 @@ export default function AboutPage() {
               <p>
                 Our philosophy, curriculum and strategic vision are rooted in
                 extensive research into effective coaching methodologies for
-                children's football from around the world – drawing insights
+                children's football from around the world, drawing insights
                 from England, France, Brazil, Germany, the United States and
                 Australia, and leveraging tried-and-tested techniques to not
                 only develop technical proficiency but also instil a sense of
@@ -233,7 +232,6 @@ export default function AboutPage() {
       <section className="bg-gradient-to-b from-background to-teal-50/60 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Governance"
             title="How the Trust is run"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -263,7 +261,7 @@ export default function AboutPage() {
               <Button
                 asChild
                 size="lg"
-                className="h-13 rounded-2xl bg-amber-brand px-7 font-display font-bold text-navy-950 shadow-[0_5px_0_0_#c78f00] transition-all hover:-translate-y-0.5 hover:bg-[#ffc634]"
+                className="h-13 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-all hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
               >
                 <Link href="/partners">
                   See our partners
