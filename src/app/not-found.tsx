@@ -21,7 +21,7 @@ export default function NotFound() {
           That ball went out of play
         </h1>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          The page you're looking for doesn't exist or has moved. Let's get
+          The page you’re looking for doesn’t exist or has moved. Let’s get
           you back on the pitch.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

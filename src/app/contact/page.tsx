@@ -20,12 +20,11 @@ export default function ContactPage() {
           <Reveal className="max-w-3xl">
             <Eyebrow>Contact Us</Eyebrow>
             <h1 className="text-balance font-display text-4xl font-black leading-[1.05] text-navy-950 sm:text-5xl lg:text-6xl">
-              Let's talk
+              Let’s talk
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              To find out more about Playtime Namibia, feel free to contact us
-              directly using the information below, or use the online form to
-              send us an email.
+              To find out more about Playtime Namibia, contact us directly on
+              the details below, or send us a message with the online form.
             </p>
           </Reveal>
         </div>
@@ -84,7 +83,7 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <p className="font-display text-sm font-bold uppercase tracking-widest text-teal-300">
-                        E-mail
+                        Email
                       </p>
                       <a
                         href={`mailto:${site.email}`}
@@ -121,11 +120,12 @@ export default function ContactPage() {
           <div className="lg:col-span-3">
             <Reveal delay={0.1}>
               <h2 className="mb-5 font-display text-2xl font-black text-navy-950">
-                Email us today
+                Send us a message
               </h2>
               <p className="mb-6 leading-relaxed text-muted-foreground">
-                Please take a moment to fill in the form below and a member of
-                our team will contact you back.
+                Fill in the form below and it opens an email to our team,
+                ready for you to send. A member of the team will get back to
+                you.
               </p>
               <ContactForm />
             </Reveal>

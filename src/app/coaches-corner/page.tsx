@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { VideoGrid } from "@/components/video-grid";
 
 export const metadata: Metadata = {
-  title: "Coaches' Corner",
+  title: "Coaches’ Corner",
   description:
     "A growing collection of coaching resources for the Playtime Namibia coaching community: drills, lessons and video tutorials for youth soccer and goalkeeping.",
   alternates: { canonical: "/coaches-corner" },
@@ -22,10 +22,9 @@ export default function CoachesCornerPage() {
               Resources for our coaching community
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              This dedicated space is designed to support and inspire our
-              local coaching community. Here you'll find a growing collection
-              of valuable resources: insightful articles, practical coaching
-              lessons, helpful videos and more.
+              A dedicated space to support and inspire our local coaching
+              community. Here you’ll find a growing collection of articles,
+              practical coaching lessons, videos and more.
             </p>
           </Reveal>
         </div>
@@ -49,7 +48,7 @@ export default function CoachesCornerPage() {
                 {
                   icon: Lightbulb,
                   title: "Keep developing",
-                  text: "By continuously developing our skills, we elevate the standard of coaching.",
+                  text: "When coaches keep developing their skills, the standard of coaching rises for every child.",
                 },
               ].map((card) => (
                 <div key={card.title} className="sm:px-6">
@@ -73,7 +72,7 @@ export default function CoachesCornerPage() {
               Video library
             </h2>
             <p className="mt-2 text-muted-foreground">
-              Check back regularly for new updates.
+              Check back regularly for new videos.
             </p>
           </Reveal>
 

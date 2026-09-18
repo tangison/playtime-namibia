@@ -1,15 +1,15 @@
 /**
- * Demo-mode loading splash: logo + tagline + progress bar.
+ * Branded loading splash: logo + tagline + progress bar.
  * Server-rendered into the HTML (no flash of content), driven by a small
  * inline script that runs before paint. Shown once per session; skipped
  * entirely under prefers-reduced-motion.
  */
 
-export function DemoSplash() {
+export function SiteSplash() {
   return (
     <>
       <div
-        id="demo-splash"
+        id="site-splash"
         aria-hidden="true"
         className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-opacity duration-500"
       >
@@ -31,19 +31,20 @@ export function DemoSplash() {
       <script
         dangerouslySetInnerHTML={{
           __html: `(function () {
-  var el = document.getElementById("demo-splash");
+  var el = document.getElementById("site-splash");
   if (!el) return;
+  function hide() {
+    el.style.display = "none";
+    document.documentElement.style.overflow = "";
+  }
   var skip = false;
-  try { skip = sessionStorage.getItem("pt-demo-splash") === "1"; } catch (e) {}
+  try { skip = sessionStorage.getItem("pt-splash") === "1"; } catch (e) {}
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (skip || reduce) { el.remove(); return; }
-  try { sessionStorage.setItem("pt-demo-splash", "1"); } catch (e) {}
+  if (skip || reduce) { hide(); return; }
+  try { sessionStorage.setItem("pt-splash", "1"); } catch (e) {}
   document.documentElement.style.overflow = "hidden";
   var fade = setTimeout(function () { el.style.opacity = "0"; }, 1250);
-  var kill = setTimeout(function () {
-    el.remove();
-    document.documentElement.style.overflow = "";
-  }, 1800);
+  var hide_ = setTimeout(hide, 1800);
 })();`,
         }}
       />

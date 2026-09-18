@@ -25,7 +25,7 @@ export function ContactForm() {
 
     const subject = encodeURIComponent(`Website enquiry from ${name}`);
     const body = encodeURIComponent(
-      `Hi Playtime Namibia,\n\n${message}\n\nName: ${name}\nE-mail: ${email}`
+      `Hi Playtime Namibia,\n\n${message}\n\nName: ${name}\nEmail: ${email}`
     );
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
     setSent(true);
@@ -83,7 +83,7 @@ export function ContactForm() {
         </div>
         <div>
           <Label htmlFor="contact-email" className="text-sm font-semibold text-navy-900">
-            E-mail
+            Email address
           </Label>
           <Input
             id="contact-email"
@@ -104,7 +104,7 @@ export function ContactForm() {
             name="message"
             required
             rows={6}
-            placeholder="Tell us how you'd like to get involved, or ask us anything…"
+            placeholder="Tell us how you’d like to get involved, or ask us anything…"
             className="mt-2 min-h-32 rounded-xl"
           />
         </div>

@@ -176,7 +176,7 @@ export default function CoachesPage() {
               Coaches, keep learning
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-lg text-navy-200">
-              The Coaches' Corner is a growing collection of drills, lessons
+              The Coaches’ Corner is a growing collection of drills, lessons
               and video resources for our local coaching community.
             </p>
             <Button
@@ -185,7 +185,7 @@ export default function CoachesPage() {
               className="mt-8 h-14 rounded-2xl press-amber bg-amber-brand px-7 font-display font-bold text-navy-950 transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-amber-bright active:translate-y-[3px] active:shadow-[0_2px_0_0_var(--color-amber-deep)]"
             >
               <Link href="/coaches-corner">
-                Visit the Coaches' Corner
+                Visit the Coaches’ Corner
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Link>
             </Button>

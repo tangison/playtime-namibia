@@ -60,12 +60,12 @@ export default function EventsPage() {
           <Reveal className="max-w-3xl">
             <Eyebrow>Events & News</Eyebrow>
             <h1 className="text-balance font-display text-4xl font-black leading-[1.05] text-navy-950 sm:text-5xl lg:text-6xl">
-              What's happening at Playtime
+              What’s happening at Playtime
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              An update of our latest activities and events across all sports
-              disciplines. Be sure to keep checking back as we continually
-              update this section.
+              The latest activities and events across all our sports
+              disciplines. We update this section regularly, so keep checking
+              back.
             </p>
           </Reveal>
         </div>
@@ -98,8 +98,8 @@ export default function EventsPage() {
                   Under-9 & Under-11 Soccer Tournament
                 </h2>
                 <p className="mt-3 max-w-2xl text-lg text-teal-300">
-                  Weekend tournament brings Walvis Bay youth together in
-                  spirit of sport
+                  A weekend tournament brought Walvis Bay’s young players
+                  together
                 </p>
               </div>
 
@@ -122,19 +122,19 @@ export default function EventsPage() {
                     <div className="rounded-2xl bg-teal-50 p-5">
                       <p className="flex items-center gap-2 font-display text-lg font-black text-navy-950">
                         <Trophy className="size-5 text-teal-700" aria-hidden="true" />
-                        Final result: The Navy 4-1 Red Team
+                        Final result: The Navy 4–1 Red Team
                       </p>
                       <p className="mt-1.5 text-sm text-teal-900">
-                        In a dynamic and well-fought match, The Navy emerged
-                        victorious with an impressive 4-1 win.
+                        In a well-fought final match, The Navy emerged
+                        victorious with an impressive 4–1 win.
                       </p>
                     </div>
                     <p>
                       We extend our heartfelt thanks to all the organisers,
                       coaches, players and supporters who made the day such a
-                      vibrant success. Your energy and commitment continue to
-                      drive the spirit of community and youth development
-                      through sport.
+                      success. Your energy and commitment continue to drive
+                      community and youth development through sport in Walvis
+                      Bay.
                     </p>
                     <p className="flex items-center gap-2 text-sm font-semibold text-teal-700">
                       <Users className="size-4" aria-hidden="true" />

@@ -32,7 +32,7 @@ export default function PrivacyPage() {
             <p>
               This website sets no tracking or advertising cookies and runs
               no analytics or third-party trackers. When you use the contact
-              form, the details you type (your name, e-mail address and
+              form, the details you type (your name, email address and
               message) are used only to compose an email from your own email
               app to {site.email}. That information is not stored on this
               website or shared with anyone else.

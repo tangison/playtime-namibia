@@ -139,7 +139,6 @@ export default function AboutPage() {
           <SectionHeading
             dark
             align="center"
-            eyebrow="Philosophy"
             title="Every child deserves the opportunity to play"
           />
           <Reveal delay={0.1}>
@@ -164,23 +163,23 @@ export default function AboutPage() {
               <p>
                 Our philosophy, curriculum and strategic vision are rooted in
                 extensive research into effective coaching methodologies for
-                children's football from around the world, drawing insights
+                children’s football from around the world, drawing insights
                 from England, France, Brazil, Germany, the United States and
-                Australia, and leveraging tried-and-tested techniques to not
-                only develop technical proficiency but also instil a sense of
-                social responsibility.
+                Australia, and combining tried-and-tested techniques to
+                develop technical proficiency and instil a sense of social
+                responsibility.
               </p>
               <p>
                 Recognising the pivotal role of the education system, we have
                 identified schools as our primary avenue for catalysing
                 meaningful change in the lives of young people. That is why
-                we've dedicated almost a decade to developing the Playtime
+                we’ve dedicated almost a decade to developing the Playtime
                 Youth Development Trust initiative, ensuring a comprehensive
                 and sustainable approach to youth empowerment.
               </p>
             </div>
             <p className="mt-8 rounded-2xl bg-white/5 p-6 text-center font-display text-xl font-bold text-teal-300">
-              Together, we're building a brighter future, one child at a time.
+              Together, we’re building a brighter future, one child at a time.
             </p>
           </Reveal>
         </div>
@@ -191,7 +190,6 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
-            eyebrow="Leadership"
             title="Meet our trustees"
             lead="Playtime is governed by a founder and three trustees who bring together careers in international sport and business."
           />

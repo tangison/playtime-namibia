@@ -29,7 +29,7 @@ const heroSlides = [
   },
   {
     src: "/images/hub-field.webp",
-    alt: "The Hub's enclosed artificial turf field in Kuisebmond under a blue sky",
+    alt: "The Hub’s enclosed artificial turf field in Kuisebmond under a blue sky",
   },
   {
     src: "/images/multisports.webp",
@@ -43,7 +43,7 @@ const sports = [
     image: "/images/soccer.webp",
     alt: "Children in orange and green training bibs playing soccer on the artificial turf at The Hub",
     participants: "~1,200 participants",
-    ages: "U7-U17, boys & girls",
+    ages: "U7–U17, boys & girls",
     description:
       "Our primary sports code. Daily training sessions, weekend mini-tournaments and games at The Hub in Kuisebmond and the Atlantis Sports Club.",
   },
@@ -54,7 +54,7 @@ const sports = [
     participants: "~250 daily participants",
     ages: "Boys & girls",
     description:
-      "A flourishing program that has nurtured players who went on to represent the national team, bringing cricket to communities it rarely reaches.",
+      "A flourishing programme that has nurtured players who went on to represent the national team, bringing cricket to communities it rarely reaches.",
   },
   {
     name: "Multi-Sports",
@@ -63,14 +63,14 @@ const sports = [
     participants: "Early mornings",
     ages: "Under 7s",
     description:
-      "A scientifically proven way for younger children to build fundamental movement skills and physical literacy before their teen years.",
+      "A proven way for younger children to build fundamental movement skills and physical literacy before their teen years.",
   },
   {
     name: "Athletics",
     image: "/images/athletics.webp",
     alt: "A boy in a yellow IAAF vest running with a relay baton at athletics training",
     participants: "~85 participants",
-    ages: "U9-U19",
+    ages: "U9–U19",
     description:
       "Track and field training three times a week, preparing athletes for school, regional and national competition.",
   },
@@ -204,16 +204,14 @@ export default function HomePage() {
           <div className="order-1 lg:order-2">
             <SectionHeading
               title="A key player in Namibian youth sport"
-              lead="Playtime gives as many children and young people as possible free access to sports activities, teaching them life skills with the help of sport and promoting their development, education and empowerment."
+              lead="Playtime gives as many children and young people as possible free access to sport, teaching them life skills along the way and promoting their development, education and empowerment."
             />
             <Reveal delay={0.1}>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Taking into consideration our employees, youth participation,
-                infrastructure, breadth and the number of sporting young people
-                per week, Playtime Namibia is undoubtedly a key player in this
-                space in Namibia. Through its approach, Playtime has provided
-                significant, tried and tested development for the youth in the
-                coastal town of Walvis Bay.
+                Count our staff, our venues, our weekly turnout of young
+                players, and Playtime stands out as a key player in youth
+                sport in Namibia. Through its approach, the Trust has provided
+                tried-and-tested development for the youth of Walvis Bay.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {["Inclusive", "Life skills", "Community", "Education"].map(
@@ -302,7 +300,7 @@ export default function HomePage() {
             <SectionHeading
               dark
               title="The Hub, the heart of sport in Kuisebmond"
-              lead="Crafted by Playtime since 2017 and nestled next to the iconic Blue Waters Stadium, our premier facility sets the standard for sporting venues in the region."
+              lead="Built by Playtime since 2017 and next to the iconic Blue Waters Stadium, our premier facility sets the standard for sporting venues in the region."
             />
             <Reveal delay={0.1}>
               <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -342,7 +340,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border-4 border-white/10 shadow-2xl">
               <Image
                 src="/images/hub-field.webp"
-                alt="The Hub's enclosed artificial turf field in Kuisebmond under a blue sky"
+                alt="The Hub’s enclosed artificial turf field in Kuisebmond under a blue sky"
                 width={1600}
                 height={1000}
                 loading="lazy"
@@ -415,8 +413,8 @@ export default function HomePage() {
               <span className="text-teal-700">one child at a time</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-navy-700">
-              Whether you're considering volunteering your time or exploring
-              sponsorship opportunities, we'd love to discuss how you can make
+              Whether you’re considering volunteering your time or exploring
+              sponsorship opportunities, we’d love to discuss how you can make
               a meaningful difference for children in Walvis Bay.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -436,7 +434,7 @@ export default function HomePage() {
                 variant="outline"
                 className="h-14 rounded-2xl border-2 border-navy-950 bg-transparent px-7 font-display text-base font-bold text-navy-950 transition-[transform,background-color,border-color,color] hover:-translate-y-0.5 hover:bg-navy-950 hover:text-white"
               >
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">Contact us</Link>
               </Button>
             </div>
           </Reveal>

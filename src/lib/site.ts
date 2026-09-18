@@ -10,13 +10,13 @@ export const site = {
   phoneHref: "tel:+26464279650",
   email: "info@playtime.com.na",
   hours: [
-    { days: "Monday-Friday", time: "8:00-18:00" },
-    { days: "Saturday", time: "10:00-16:00" },
+    { days: "Monday–Friday", time: "8:00–18:00" },
+    { days: "Saturday", time: "10:00–16:00" },
     { days: "Sunday", time: "Closed" },
   ],
   facebook: "https://www.facebook.com/playtimenamibia",
   tagline: "Empowering Youth Through Sports",
-  missionLine: "Together, we're building a brighter future, one child at a time.",
+  missionLine: "Together, we’re building a brighter future, one child at a time.",
 } as const;
 
 export type NavChild = { title: string; href: string; description?: string };
@@ -56,7 +56,7 @@ export const navItems: NavItem[] = [
         description: "Meet the coaches at The Hub and Atlantis",
       },
       {
-        title: "Coaches' Corner",
+        title: "Coaches’ Corner",
         href: "/coaches-corner",
         description: "Drills, lessons and video resources",
       },

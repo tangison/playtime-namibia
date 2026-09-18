@@ -102,27 +102,15 @@ Resend into `src/components/contact-form.tsx`.
 - Page copy lives in each route under `src/app/`.
 - Images live in `public/images/` (WebP recommended; keep files under 200 KB).
 
-## Demo mode
+## Loading splash
 
-The site ships with an optional demo mode used for client previews. Set the
-environment variable `DEMO_MODE=true` at build time to enable it:
-
-- Only `/` (home) and `/coaches` (coaching team) are open; every other route
-  is rewritten to a branded lock screen via middleware. The lock is
-  server-side and cannot be bypassed by URL tricks (trailing slashes, query
-  strings and client-side navigation all resolve to the lock screen), while
-  unknown paths still return a real 404.
-- A branded loading splash (logo, tagline, progress bar) shows once per
-  session. It is skipped entirely for `prefers-reduced-motion` users.
-- A "Demo by Tangison Studio" badge links to the studio site.
-- `robots.txt` disallows everything, the sitemap lists only the open pages,
-  and every response carries `X-Robots-Tag: noindex, nofollow`, so the demo
-  cannot leak into search results.
-
-Without the variable (the default, and how the production site builds),
-middleware passes everything through, no splash or badge is rendered, and
-the full site is served. Nothing needs to be removed between demo and
-production.
+The site opens with a short branded splash on a visitor’s first page view of
+a session: the Playtime logo, the tagline, and a progress bar. It is
+server-rendered into the HTML (no flash of content), driven by a small inline
+script that runs before paint, shown once per session, and skipped entirely
+for `prefers-reduced-motion` users. It lives in
+`src/components/site-splash.tsx`; remove the `<SiteSplash />` line in
+`src/app/layout.tsx` to turn it off.
 
 ## Credits
 

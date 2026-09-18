@@ -24,9 +24,8 @@ export default function SchoolPartnershipsPage() {
               Sport, straight from the school gate
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              Playtime manages multi-sport programmes on behalf of schools in
-              the locale, and keeps school football in Walvis Bay alive,
-              organised and thriving.
+              Playtime runs multi-sport programmes for local schools and keeps
+              school football in Walvis Bay alive, organised and thriving.
             </p>
           </Reveal>
         </div>
@@ -43,25 +42,22 @@ export default function SchoolPartnershipsPage() {
             <Reveal delay={0.1}>
               <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  Playtime manages a multi-sports programme on behalf of
-                  schools in the locale. The programme is held in the early
-                  morning and accommodates two schools for an hour each,
-                  attending one after the other for the duration of the
-                  morning. The target age groups for the programme are
-                  learners under 7 years old.
+                  Playtime runs a multi-sports programme for local schools. It
+                  is held in the early morning and accommodates two schools
+                  for an hour each, one after the other for the duration of the
+                  morning. The target age groups are learners under 7 years
+                  old.
                 </p>
                 <p>
-                  The multi-sport approach has been scientifically proven as
-                  one of the best ways to help young children develop a broad
-                  variety of fundamental movement skills and physical
-                  literacy, providing an excellent foundation for lifelong
-                  physical activity.
+                  The multi-sport approach is a proven way to help young
+                  children develop a broad variety of fundamental movement
+                  skills and physical literacy, providing an excellent
+                  foundation for lifelong physical activity.
                 </p>
                 <p>
-                  We believe that this programme will not only benefit the
-                  schools in offering physical education but also provide a
-                  solid foundation for lifelong physical activity for the
-                  learners.
+                  The programme gives schools extra physical education in the
+                  morning, and gives the learners a solid foundation for an
+                  active life.
                 </p>
               </div>
               <ul className="mt-8 space-y-3">
@@ -123,28 +119,25 @@ export default function SchoolPartnershipsPage() {
               <div className="mt-6 space-y-4 leading-relaxed text-navy-200">
                 <p>
                   The Trust also administrates and manages school football
-                  leagues for both boys and girls. Traditionally, schools in
-                  the coastal region have always had strong school football
-                  leagues, but due to the sheer lack of resources, these
-                  leagues disintegrated into extremely ill-managed leagues run
-                  primarily by teachers who had a passion for football
-                  development but lacked the support of the local school
-                  authorities or respective schools.
+                  leagues for both boys and girls. Coastal schools have a long
+                  tradition of strong school football, but a lack of resources
+                  left the leagues ill-managed, run by teachers who had a
+                  passion for football development but no support from the
+                  school authorities.
                 </p>
                 <p>
-                  Playtime has provided relief to the schools of these vital
-                  functions, including scheduling, administration, venue
-                  selection, and provision of referees and other resources
-                  required on the ground. By doing so, Walvis Bay now has a
-                  well-run, organised, successful and stable annual school
-                  football league for our local schools.
+                  Playtime has taken those functions off the schools’ hands:
+                  scheduling, administration, venue selection, and the
+                  provision of referees and other resources required on the
+                  ground. The result is that Walvis Bay now has a well-run,
+                  organised and stable annual school football league for its
+                  local schools.
                 </p>
                 <p>
-                  We believe that our ability to run these leagues for schools
-                  has significantly improved physical education and sports
-                  programmes for learners in Walvis Bay, and that it ensures
-                  learners have access to quality physical education and
-                  sports programmes that benefit them throughout their lives.
+                  Running these leagues has significantly improved physical
+                  education and sports programmes for learners in Walvis Bay,
+                  giving them access to quality sport that benefits them
+                  throughout their lives.
                 </p>
               </div>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -152,7 +145,7 @@ export default function SchoolPartnershipsPage() {
                   { icon: ClipboardList, text: "Scheduling & administration" },
                   { icon: School, text: "Venue selection" },
                   { icon: Users, text: "Referees & match-day resources" },
-                  { icon: Trophy, text: "Boys' & girls' leagues, every year" },
+                  { icon: Trophy, text: "Boys’ & girls’ leagues, every year" },
                 ].map((item) => (
                   <li
                     key={item.text}
@@ -176,7 +169,7 @@ export default function SchoolPartnershipsPage() {
               Is your school interested?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-lg text-muted-foreground">
-              We'd love to talk about how Playtime can support physical
+              We’d love to talk about how Playtime can support physical
               education at your school.
             </p>
             <Button

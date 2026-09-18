@@ -245,7 +245,7 @@ button:focus-visible {
   border-radius: 6px;
 }
 
-/* ── Demo loading splash ─────────────────────────────── */
+/* ── Loading splash ──────────────────────────────────── */
 .splash-logo {
   opacity: 0;
   transform: translateY(10px);

@@ -17,7 +17,7 @@ const hubAmenities = [
   "40 × 40 m enclosed artificial turf field",
   "Toilets and showers",
   "Spectator stand",
-  "Streamlined administration office",
+  "Administration office",
   "Clay soccer field (adjacent)",
   "Evolving cricket training ground",
   "Newly unveiled cricket batting nets",
@@ -36,7 +36,7 @@ export default function FacilitiesPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               From our flagship Hub in Kuisebmond to the Atlantis sports
-              grounds in town. Every child in Walvis Bay is never far from a
+              grounds in town, no child in Walvis Bay is ever far from a
               Playtime venue.
             </p>
           </Reveal>
@@ -50,43 +50,31 @@ export default function FacilitiesPage() {
             <div>
               <SectionHeading
                 eyebrow="The Hub · Kuisebmond"
-                title="The heart of sporting excellence"
+                title="Our flagship venue, next to Blue Waters Stadium"
               />
               <Reveal delay={0.1}>
                 <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
                   <p>
-                    Step into the heart of sporting excellence at The Hub,
-                    meticulously crafted by Playtime since 2017. Nestled in
-                    the vibrant Kuisebmond district of Walvis Bay, our premier
-                    facility stands as a beacon of modernity, setting new
-                    standards for sporting venues in the region.
+                    The Hub is our premier facility, built by Playtime since
+                    2017 in the Kuisebmond district of Walvis Bay. It sits
+                    centrally next to the iconic Blue Waters Stadium and the
+                    main shopping district, and all major Playtime activities
+                    run from here.
                   </p>
                   <p>
-                    Centrally located next to the iconic Blue Waters Stadium
-                    and amidst the bustling primary shopping district, The Hub
-                    is a bustling epicentre where all major activities are
-                    orchestrated with precision. Our flagship offering, the
-                    Hub Playtime sports field facility, boasts a
-                    state-of-the-art enclosed artificial turf field measuring
-                    40 × 40 metres.
-                  </p>
-                  <p>
-                    Adjacent to this, you'll find a sprawling clay soccer
-                    field and an evolving cricket training ground awaiting its
-                    final touches. A grass field for training sessions,
+                    The enclosed artificial turf field measures 40 × 40 metres,
+                    with toilets, showers, a spectator stand and an
+                    administration office on site. Adjacent are a clay soccer
+                    field, an evolving cricket training ground and our newly
+                    unveiled cricket batting nets. A grass training field,
                     although not owned by Playtime, is readily available for
-                    use, and we have also recently unveiled a cricket batting
-                    nets facility, seamlessly integrated with our existing
-                    infrastructure.
+                    use nearby.
                   </p>
                   <p>
-                    The Hub is a perpetual work in progress, with imminent
-                    plans to cater to a diverse array of sports disciplines,
-                    including basketball in the near future. Long-term
-                    aspirations include expanding our offerings to encompass
-                    even more facilities, ensuring that The Hub remains the
-                    ultimate destination for sports enthusiasts, now and in
-                    the years to come.
+                    The Hub keeps growing. Basketball is planned for the near
+                    future, and our long-term aim is to expand to even more
+                    facilities so the venue keeps serving Walvis Bay sport for
+                    years to come.
                   </p>
                 </div>
                 <ul className="mt-8 grid gap-2.5 sm:grid-cols-2">
@@ -107,7 +95,7 @@ export default function FacilitiesPage() {
                 <div className="overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
                   <Image
                     src="/images/hub-field.webp"
-                    alt="The Hub's enclosed 40 × 40 metre artificial turf field in Kuisebmond under a blue sky"
+                    alt="The Hub’s enclosed 40 × 40 metre artificial turf field in Kuisebmond under a blue sky"
                     width={1600}
                     height={1000}
                     loading="lazy"
@@ -145,17 +133,17 @@ export default function FacilitiesPage() {
             />
             <Reveal delay={0.1}>
               <p className="mt-6 leading-relaxed text-navy-200">
-                The Atlantis sports grounds are set in town in Walvis Bay and
-                are home to approximately 250 weekly participants, engaged
-                primarily in soccer. Age groups participating range from under
-                7 to under 17 and include both boys and girls.
+                The Atlantis sports grounds sit in town in Walvis Bay and
+                host approximately 250 weekly participants, engaged primarily
+                in soccer. Age groups range from under 7 to under 17 and
+                include both boys and girls.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="rounded-full bg-white/10 px-5 py-2.5 font-display text-sm font-bold text-teal-300">
                   ~250 weekly participants
                 </span>
                 <span className="rounded-full bg-white/10 px-5 py-2.5 font-display text-sm font-bold text-teal-300">
-                  U7-U17, boys & girls
+                  U7–U17, boys & girls
                 </span>
                 <span className="rounded-full bg-white/10 px-5 py-2.5 font-display text-sm font-bold text-teal-300">
                   Home of Atlantis Sport Club
@@ -189,7 +177,7 @@ export default function FacilitiesPage() {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-lg text-navy-700">
               The Hub is next to Blue Waters Stadium in Kuisebmond. Want to
-              visit, train, or host an event? Get in touch.
+              visit, train or host an event? Get in touch.
             </p>
             <Button
               asChild

@@ -108,7 +108,7 @@ export function SiteFooter() {
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 size-4 shrink-0 text-teal-300" aria-hidden="true" />
                 <span>
-                  Mon-Fri 8:00-18:00, Sat 10:00-16:00, Sun closed
+                  Mon–Fri 8:00–18:00, Sat 10:00–16:00, Sun closed
                 </span>
               </li>
             </ul>

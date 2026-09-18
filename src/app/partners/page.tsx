@@ -10,7 +10,7 @@ import { sponsors } from "@/lib/site";
 export const metadata: Metadata = {
   title: "International Partners",
   description:
-    "Playtime Namibia's international partners: Global United FC (Germany) and ASC Göttingen, plus the local sponsors who keep our teams playing.",
+    "Playtime Namibia’s international partners: Global United FC (Germany) and ASC Göttingen, plus the local sponsors who keep our teams playing.",
   alternates: { canonical: "/partners" },
 };
 
@@ -26,7 +26,7 @@ export default function PartnersPage() {
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
               From climate-action football in Germany to a decade-long coach
-              exchange programme. Playtime's reach extends well beyond Walvis
+              exchange programme, Playtime’s reach extends well beyond Walvis
               Bay.
             </p>
           </Reveal>
@@ -45,20 +45,19 @@ export default function PartnersPage() {
               <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
                   Global United FC is a non-profit registered association in
-                  Germany that aims to protect the environment and raise
-                  awareness of climate change issues through the unifying
-                  power of soccer. The association engages more than 500
-                  former professional and partly active football players from
-                  around the world in charity matches and individual projects
-                  in endangered or uncommon locations.
+                  Germany that protects the environment and raises awareness
+                  of climate change through the unifying power of soccer. The
+                  association engages more than 500 former professional and
+                  partly active football players from around the world in
+                  charity matches and individual projects in endangered or
+                  uncommon locations.
                 </p>
                 <p>
                   Playtime recognises the importance of environmental
-                  conservation and is committed to supporting Global United's
-                  mission through a mutual collaboration and partnership. We
-                  believe that soccer can be a powerful tool for promoting
-                  environmental awareness and making a positive impact on the
-                  world.
+                  conservation and supports Global United’s mission through a
+                  mutual collaboration and partnership. We believe soccer can
+                  be a powerful tool for promoting environmental awareness and
+                  making a positive impact on the world.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -145,7 +144,7 @@ export default function PartnersPage() {
                 <p>
                   Playtime provides each volunteer with free accommodation,
                   transport and other necessary resources during their tenure
-                  in Namibia. This partnership remains pivotal to Playtime's
+                  in Namibia. This partnership remains pivotal to Playtime’s
                   success today.
                 </p>
               </div>

@@ -28,7 +28,7 @@ const pathways = [
   {
     icon: Megaphone,
     title: "Spread the word",
-    text: "Follow our stories, share our events and tell the community what's happening at The Hub. Visibility multiplies every contribution.",
+    text: "Follow our stories, share our events and tell the community what’s happening at The Hub. Visibility multiplies every contribution.",
   },
 ];
 
@@ -41,24 +41,22 @@ export default function GetInvolvedPage() {
             <Reveal>
               <Eyebrow className="text-teal-300">Get Involved</Eyebrow>
               <h1 className="text-balance font-display text-4xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-                Your support keeps{" "}
-                <span className="text-amber-brand">1,500+ children</span>{" "}
+                Your support keeps more than{" "}
+                <span className="text-amber-brand">a thousand children</span>{" "}
                 playing every week
               </h1>
               <p className="mt-6 text-pretty text-lg leading-relaxed text-navy-200">
                 At Playtime Namibia, we deeply appreciate the ongoing support
                 from both our local community and the broader business
-                community. If you or your organisation is interested in
-                learning more about Playtime and how you can make a
-                meaningful difference in the lives of children in our
-                community, we encourage you to reach out to us.
+                community. If you or your organisation would like to learn
+                more about Playtime and the difference you can make for
+                children here, we encourage you to reach out.
               </p>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-navy-200">
-                Whether you're considering volunteering your time or
-                exploring sponsorship opportunities, we welcome the chance to
-                discuss how you can contribute. Together, we can create
-                positive change and bright futures for the children in our
-                community.
+                Whether you’re considering volunteering your time or exploring
+                sponsorship opportunities, we welcome the chance to discuss
+                how you can contribute. Together, we can create positive
+                change and bright futures for the children in our community.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button
@@ -68,7 +66,7 @@ export default function GetInvolvedPage() {
                 >
                   <Link href="/contact">
                     <Mail className="size-5" aria-hidden="true" />
-                    Contact us today
+                    Contact us
                   </Link>
                 </Button>
                 <Button
@@ -103,7 +101,6 @@ export default function GetInvolvedPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
-            eyebrow="Ways to contribute"
             title="Every kind of support counts"
           />
           <Reveal delay={0.1}>
@@ -127,8 +124,8 @@ export default function GetInvolvedPage() {
           <Reveal delay={0.2}>
             <div className="mt-14 rounded-[2rem] bg-teal-50 p-8 text-center sm:p-12">
               <p className="mx-auto max-w-2xl text-balance font-display text-2xl font-black text-navy-950 sm:text-3xl">
-                "Together, we can create positive change and bright futures
-                for the children in our community."
+                “Together, we can create positive change and bright futures
+                for the children in our community.”
               </p>
               <Button
                 asChild
